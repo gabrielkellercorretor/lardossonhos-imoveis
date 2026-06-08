@@ -2,12 +2,12 @@
 import { useState } from 'react'
 
 const imoveis = [
-  { id: 1, tipo: 'Apartamento', titulo: 'Apartamento 3 dormitórios com vista para o mar', bairro: 'Embaré', cidade: 'Santos', preco: 680000, modalidade: 'venda', quartos: 3, banheiros: 2, vagas: 2, area: 88, andar: '8º', destaque: true, cod: '42225', ph: 'ph-1', emoji: '🏠', condo: 780, iptu: 1200, features: ['Varanda com vista canal','Cozinha planejada','Armários embutidos','2 vagas cobertas','Portaria 24h','Salão de festas','Academia','Piscina rooftop','Pet friendly','Aceita financiamento','Pronto para morar','Reformado 2023'] },
-  { id: 2, tipo: 'Apartamento', titulo: 'Apartamento 2 dormitórios reformado', bairro: 'Boqueirão', cidade: 'Santos', preco: 395000, modalidade: 'venda', quartos: 2, banheiros: 1, vagas: 1, area: 70, andar: '4º', destaque: false, cod: '38891', ph: 'ph-2', emoji: '🏢', condo: 480, iptu: 900, features: ['Reformado 2022','Armários embutidos','Portaria 24h','Próximo ao metrô','Aceita financiamento'] },
-  { id: 3, tipo: 'Casa', titulo: 'Casa 3 dormitórios com quintal', bairro: 'Gonzaga', cidade: 'Santos', preco: 3200, modalidade: 'aluguel', quartos: 3, banheiros: 2, vagas: 2, area: 120, andar: null, destaque: false, cod: '51104', ph: 'ph-3', emoji: '🏡', condo: null, iptu: null, features: ['Quintal amplo','2 vagas','Próximo à praia','Pet friendly'] },
-  { id: 4, tipo: 'Terreno', titulo: 'Terreno comercial em área nobre', bairro: 'Vila Belmiro', cidade: 'Santos', preco: 220000, modalidade: 'venda', quartos: null, banheiros: null, vagas: null, area: 250, andar: null, destaque: false, cod: '29934', ph: 'ph-4', emoji: '🏗️', condo: null, iptu: 600, features: ['Área comercial','Documentação ok','Topografia plana'] },
-  { id: 5, tipo: 'Cobertura', titulo: 'Cobertura 4 dormitórios vista mar', bairro: 'Ponta da Praia', cidade: 'Santos', preco: 1200000, modalidade: 'venda', quartos: 4, banheiros: 3, vagas: 3, area: 210, andar: '12º', destaque: true, cod: '60012', ph: 'ph-5', emoji: '🌊', condo: 1200, iptu: 3200, features: ['Vista mar panorâmica','Terraço privativo','Churrasqueira','3 vagas','Spa e sauna','Condomínio clube'] },
-  { id: 6, tipo: 'Studio', titulo: 'Studio moderno mobiliado', bairro: 'Gonzaga', cidade: 'Santos', preco: 1800, modalidade: 'aluguel', quartos: 1, banheiros: 1, vagas: 1, area: 42, andar: '3º', destaque: false, cod: '44330', ph: 'ph-6', emoji: '🏠', condo: 320, iptu: null, features: ['Mobiliado','Cozinha americana','Wi-Fi incluso','Portaria 24h'] },
+  { id: 1, tipo: 'Apartamento', titulo: 'Apartamento 3 dormitórios com vista para o mar', bairro: 'Canto do Forte', cidade: 'Praia Grande', preco: 680000, modalidade: 'venda', quartos: 3, banheiros: 2, vagas: 2, area: 88, andar: '8º', destaque: true, cod: '42225', ph: 'ph-1', emoji: '🏠', condo: 780, iptu: 1200, features: ['Varanda com vista mar','Cozinha planejada','Armários embutidos','2 vagas cobertas','Portaria 24h','Salão de festas','Academia','Piscina','Pet friendly','Aceita financiamento','Pronto para morar','Reformado 2023'] },
+  { id: 2, tipo: 'Apartamento', titulo: 'Apartamento 2 dormitórios reformado', bairro: 'Tupi', cidade: 'Praia Grande', preco: 395000, modalidade: 'venda', quartos: 2, banheiros: 1, vagas: 1, area: 70, andar: '4º', destaque: false, cod: '38891', ph: 'ph-2', emoji: '🏢', condo: 480, iptu: 900, features: ['Reformado 2022','Armários embutidos','Portaria 24h','Próximo à praia','Aceita financiamento'] },
+  { id: 3, tipo: 'Casa', titulo: 'Casa 3 dormitórios com quintal', bairro: 'Mirim', cidade: 'Praia Grande', preco: 3200, modalidade: 'aluguel', quartos: 3, banheiros: 2, vagas: 2, area: 120, andar: null, destaque: false, cod: '51104', ph: 'ph-3', emoji: '🏡', condo: null, iptu: null, features: ['Quintal amplo','2 vagas','Próximo à praia','Pet friendly'] },
+  { id: 4, tipo: 'Terreno', titulo: 'Terreno em área nobre', bairro: 'Guilhermina', cidade: 'Praia Grande', preco: 220000, modalidade: 'venda', quartos: null, banheiros: null, vagas: null, area: 250, andar: null, destaque: false, cod: '29934', ph: 'ph-4', emoji: '🏗️', condo: null, iptu: 600, features: ['Documentação ok','Topografia plana','Próximo ao comércio'] },
+  { id: 5, tipo: 'Cobertura', titulo: 'Cobertura 4 dormitórios vista mar', bairro: 'Ocian', cidade: 'Praia Grande', preco: 1200000, modalidade: 'venda', quartos: 4, banheiros: 3, vagas: 3, area: 210, andar: '12º', destaque: true, cod: '60012', ph: 'ph-5', emoji: '🌊', condo: 1200, iptu: 3200, features: ['Vista mar panorâmica','Terraço privativo','Churrasqueira','3 vagas','Spa e sauna','Condomínio clube'] },
+  { id: 6, tipo: 'Studio', titulo: 'Studio moderno mobiliado', bairro: 'Aviação', cidade: 'Praia Grande', preco: 1800, modalidade: 'aluguel', quartos: 1, banheiros: 1, vagas: 1, area: 42, andar: '3º', destaque: false, cod: '44330', ph: 'ph-6', emoji: '🏠', condo: 320, iptu: null, features: ['Mobiliado','Cozinha americana','Wi-Fi incluso','Portaria 24h'] },
 ]
 
 const formatPreco = (preco, modalidade) => {
@@ -44,7 +44,16 @@ export default function Home() {
     navLinks: { display:'flex', gap:'28px', alignItems:'center' },
     navA: { color:'rgba(255,255,255,0.72)', textDecoration:'none', fontSize:'13px', fontWeight:500, cursor:'pointer' },
     navCta: { background:'var(--accent)', color:'var(--brand)', fontWeight:700, padding:'9px 20px', borderRadius:'8px', fontSize:'12px', cursor:'pointer', border:'none', textTransform:'uppercase', letterSpacing:'0.4px', fontFamily:'Montserrat,sans-serif' },
-    hero: { background:'var(--brand)', minHeight:'560px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', padding:'80px 32px 60px', position:'relative', overflow:'hidden' },
+    hero: { 
+      background:'var(--brand)', 
+      backgroundImage:'url(/hero-praia-grande.jpg)', 
+      backgroundSize:'cover', 
+      backgroundPosition:'center center',
+      backgroundRepeat:'no-repeat',
+      minHeight:'580px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', padding:'80px 32px 60px', position:'relative', overflow:'hidden' 
+    },
+    heroOverlay: { position:'absolute', inset:0, background:'rgba(2,19,86,0.72)', zIndex:0 },
+    heroContent: { position:'relative', zIndex:1, display:'flex', flexDirection:'column', alignItems:'center' },
     heroTag: { background:'rgba(250,219,36,0.15)', color:'var(--accent)', fontSize:'11px', fontWeight:700, letterSpacing:'2px', textTransform:'uppercase', padding:'7px 18px', borderRadius:'20px', marginBottom:'28px', border:'1px solid rgba(250,219,36,0.25)' },
     heroH1: { fontFamily:'Montserrat,sans-serif', fontSize:'48px', fontWeight:800, color:'var(--white)', textAlign:'center', lineHeight:1.12, maxWidth:'680px', marginBottom:'18px', letterSpacing:'-1px' },
     heroP: { color:'rgba(255,255,255,0.60)', fontSize:'16px', textAlign:'center', maxWidth:'480px', lineHeight:1.7, marginBottom:'48px', fontWeight:400 },
@@ -129,7 +138,7 @@ export default function Home() {
         <div style={s.logoDot}></div>
         Gabriel Bin <span style={{color:'var(--accent)'}}>&nbsp;Imóveis</span>
       </div>
-      <p style={s.footerP}>CRECI-SP 302244-F · Santos e Região · © 2026</p>
+      <p style={s.footerP}>CRECI-SP 302244-F · Praia Grande - SP · © 2026</p>
       <div style={{display:'flex', gap:'10px'}}>
         {['▶','◆','●'].map((ic,i) => (
           <div key={i} style={{width:'32px',height:'32px',background:'rgba(250,219,36,0.12)',borderRadius:'8px',border:'1px solid rgba(250,219,36,0.2)',display:'flex',alignItems:'center',justifyContent:'center',color:'var(--accent)',fontSize:'13px',cursor:'pointer'}}>{ic}</div>
@@ -143,9 +152,11 @@ export default function Home() {
     <>
       <Nav />
       <section style={s.hero}>
-        <div style={s.heroTag}>✦ Corretor autônomo · Santos e região</div>
+      <div style={s.heroOverlay}></div>
+      <div style={s.heroContent}>
+        <div style={s.heroTag}>✦ Imóveis selecionados · Praia Grande - SP</div>
         <h1 style={s.heroH1}>Encontre o imóvel <span style={{color:'var(--accent)'}}>certo</span><br/>para o seu momento</h1>
-        <p style={s.heroP}>Atendimento personalizado, sem intermediários. Seleciono os melhores imóveis da região para você.</p>
+        <p style={s.heroP}>Imóveis selecionados e atendimento exclusivo e personalizado em Praia Grande. Do Canto do Forte ao Solemar, cuido de cada detalhe pra você.</p>
         <div style={s.searchBar}>
           <input style={s.searchInput} placeholder="Bairro, cidade ou código..." value={busca} onChange={e => setBusca(e.target.value)} />
           <div style={s.searchDiv}></div>
@@ -170,6 +181,7 @@ export default function Home() {
           <div><span style={s.statNum}>8 anos</span><span style={s.statLabel}>De experiência</span></div>
           <div><span style={s.statNum}>200+</span><span style={s.statLabel}>Famílias atendidas</span></div>
         </div>
+      </div>
       </section>
 
       <section style={s.section}>
@@ -201,7 +213,7 @@ export default function Home() {
           {[
             { label:'Finalidade', key:'modalidade', opts:[{v:'todos',l:'Todos'},{v:'venda',l:'Comprar'},{v:'aluguel',l:'Alugar'}] },
             { label:'Quartos', key:'quartos', opts:[{v:'todos',l:'Todos'},{v:'1',l:'1'},{v:'2',l:'2'},{v:'3',l:'3'},{v:'4+',l:'4+'}] },
-            { label:'Bairro', key:'bairro', opts:[{v:'todos',l:'Todos'},{v:'Embaré',l:'Embaré'},{v:'Boqueirão',l:'Boqueirão'},{v:'Gonzaga',l:'Gonzaga'},{v:'Ponta da Praia',l:'Ponta da Praia'},{v:'Vila Belmiro',l:'Vila Belmiro'}] },
+            { label:'Bairro', key:'bairro', opts:[{v:'todos',l:'Todos'},{v:'Canto do Forte',l:'Canto do Forte'},{v:'Ocian',l:'Ocian'},{v:'Tupi',l:'Tupi'},{v:'Aviação',l:'Aviação'},{v:'Guilhermina',l:'Guilhermina'},{v:'Mirim',l:'Mirim'},{v:'Solemar',l:'Solemar'}] },
           ].map(fg => (
             <div key={fg.key} style={{marginBottom:'26px'}}>
               <span style={{fontSize:'10px', fontWeight:700, color:'var(--text3)', textTransform:'uppercase', letterSpacing:'1.2px', marginBottom:'10px', display:'block'}}>{fg.label}</span>
@@ -304,7 +316,7 @@ export default function Home() {
               {[
                 { titulo:'Sobre este imóvel', conteudo: (
                   <p style={{fontSize:'14px', color:'var(--text2)', lineHeight:1.85, marginBottom:'36px', fontWeight:400}}>
-                    {im.tipo} em excelente localização no {im.bairro}, Santos. Imóvel com {im.area}m²
+                    {im.tipo} em excelente localização no {im.bairro}, Praia Grande. Imóvel com {im.area}m²
                     {im.quartos ? `, ${im.quartos} dormitórios` : ''}{im.banheiros ? `, ${im.banheiros} banheiro(s)` : ''}{im.vagas ? ` e ${im.vagas} vaga(s) de garagem` : ''}.
                     {im.andar ? ` Localizado no ${im.andar} andar.` : ''} Documentação em dia e pronto para negociação.
                   </p>

@@ -1,12 +1,12 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Gabriel Bin Imóveis | Santos e Região',
-  description: 'Corretor autônomo em Santos e região. Apartamentos, casas, terrenos e imóveis comerciais para compra e aluguel. CRECI-SP 302244-F',
-  keywords: 'imóveis santos, corretor santos, apartamento santos, casa santos, aluguel santos',
+  title: 'Gabriel Bin Imóveis | Praia Grande - SP',
+  description: 'Imóveis selecionados e atendimento exclusivo e personalizado em Praia Grande. Apartamentos, casas, terrenos e imóveis comerciais. CRECI-SP 302244-F',
+  keywords: 'imóveis praia grande, corretor praia grande, apartamento praia grande, casa praia grande, aluguel praia grande, imóveis litoral sp',
   openGraph: {
-    title: 'Gabriel Bin Imóveis',
-    description: 'Corretor autônomo em Santos e região. CRECI-SP 302244-F',
+    title: 'Gabriel Bin Imóveis | Praia Grande',
+    description: 'Imóveis selecionados e atendimento exclusivo e personalizado em Praia Grande. CRECI-SP 302244-F',
     type: 'website',
   },
 }
