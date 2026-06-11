@@ -69,7 +69,7 @@ export const metadata = {
   },
   manifest: '/manifest.json',
   verification: {
-    google: 'COLE_AQUI_SEU_GOOGLE_SEARCH_CONSOLE_CODE',
+    google: 'iHmbgblFVAwFqJAf861E_TrVdaUmwcPWvuWXMKyK1ac',
   },
 }
 
@@ -125,7 +125,7 @@ export default function RootLayout({ children }) {
                   "name": "Lar dos Sonhos Imóveis",
                   "description": "Imóveis selecionados e atendimento exclusivo em Praia Grande SP",
                   "url": "https://lardossonhosimoveis.com.br",
-                  "telephone": "+55-13-99999-0000",
+                  "telephone": "+55-13-98220-7098",
                   "address": {
                     "@type": "PostalAddress",
                     "addressLocality": "Praia Grande",
