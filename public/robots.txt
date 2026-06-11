@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lardossonhosimoveis.com.br/sitemap.xml
+
+# Bloquear admin
+Disallow: /admin/

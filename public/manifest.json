@@ -1,0 +1,14 @@
+{
+  "name": "Lar dos Sonhos Imóveis",
+  "short_name": "Lar dos Sonhos",
+  "description": "Imóveis selecionados em Praia Grande SP",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#021356",
+  "theme_color": "#021356",
+  "icons": [
+    { "src": "/favicon-16.png", "sizes": "16x16", "type": "image/png" },
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
